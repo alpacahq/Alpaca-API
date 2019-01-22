@@ -2,7 +2,7 @@
 name: API Question
 about: For general questions about the API that weren't answered by the documentation.
 title: "[Question]: "
-labels: ''
+labels: 'question'
 assignees: ''
 
 ---
