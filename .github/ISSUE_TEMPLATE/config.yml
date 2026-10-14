@@ -1,0 +1,29 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Account and trading support
+    url: https://alpaca.markets/support/request
+    about: Help with your account, funding, orders, or anything specific to you.
+  - name: Status page
+    url: https://status.alpaca.markets
+    about: Check for outages and subscribe to updates by email, SMS, Slack, webhook, or RSS.
+  - name: Community Forum
+    url: https://forum.alpaca.markets
+    about: Feature requests, questions, and dashboard bugs.
+  - name: Community Slack
+    url: https://alpaca.markets/slack
+    about: Feature requests, questions, and dashboard bugs.
+  - name: Python SDK (alpaca-py)
+    url: https://github.com/alpacahq/alpaca-py/issues
+    about: Bugs and feature requests for the Python SDK.
+  - name: JavaScript SDK (alpaca-trade-api-js)
+    url: https://github.com/alpacahq/alpaca-trade-api-js/issues
+    about: Bugs and feature requests for the JavaScript SDK.
+  - name: Go SDK (alpaca-trade-api-go)
+    url: https://github.com/alpacahq/alpaca-trade-api-go/issues
+    about: Bugs and feature requests for the Go SDK.
+  - name: C# SDK (alpaca-trade-api-csharp)
+    url: https://github.com/alpacahq/alpaca-trade-api-csharp/issues
+    about: Bugs and feature requests for the C# SDK.
+  - name: Java SDK (alpaca-java)
+    url: https://github.com/alpacahq/alpaca-java/issues
+    about: Bugs and feature requests for the Java SDK.

@@ -1,0 +1,48 @@
+name: Docs bug
+description: A page on docs.alpaca.markets is incorrect, outdated, unclear, or broken.
+labels: ["type: docs bug", "status: needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for problems in the Alpaca API guides and reference pages. Not sure which form fits? Pick the closest one.
+
+        > [!WARNING]
+        > This repository is public. **Never include API keys, secrets, OAuth tokens, or account numbers**, including in code samples.
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      placeholder: https://docs.alpaca.markets/us/...
+    validations:
+      required: true
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: Problem type
+      options:
+        - Incorrect
+        - Outdated
+        - Unclear
+        - Broken link or code example
+        - Missing information
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong
+      description: Quote the relevant text if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+  - type: checkboxes
+    id: sanitized
+    attributes:
+      label: Sensitive data
+      options:
+        - label: I removed all API keys, secrets, tokens, and account numbers from this report.
+          required: true

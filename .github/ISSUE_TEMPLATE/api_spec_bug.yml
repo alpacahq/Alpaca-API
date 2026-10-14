@@ -1,0 +1,81 @@
+name: OpenAPI spec bug
+description: An Alpaca OpenAPI spec is wrong, incomplete, invalid, or breaks code generation.
+labels: ["type: spec bug", "status: needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when an OpenAPI spec doesn't match how the API behaves, is missing something, or fails validation or code generation (for example, openapi-generator crashes while generating a Go client). Not sure which form fits? Pick the closest one.
+
+        > [!WARNING]
+        > This repository is public. **Never include API keys, secrets, OAuth tokens, or account numbers.** Replace them with placeholders such as `<API_KEY>` before submitting.
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - Trading API
+        - Market Data API
+        - Broker API
+        - Authentication
+    validations:
+      required: true
+  - type: input
+    id: spec-source
+    attributes:
+      label: Spec source
+      description: The docs URL or file name of the spec you used. This tells us which region's spec it is.
+      placeholder: https://docs.alpaca.markets/us/openapi/...
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Operation or schema
+      placeholder: GET /v2/orders or Order.status
+    validations:
+      required: true
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: Problem type
+      options:
+        - The spec doesn't match the API's behavior
+        - The spec is invalid or breaks code generation
+        - The spec is missing or incomplete
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the spec says
+      description: Quote or describe the relevant part of the spec.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should say
+      description: What the API actually does, or what the spec should contain instead.
+    validations:
+      required: true
+  - type: textarea
+    id: codegen
+    attributes:
+      label: Code generation details
+      description: If code generation fails, include the tool and version, target language, command, and error output.
+      placeholder: openapi-generator 7.10.0, go, ...
+      render: shell
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: A sanitized request and response that shows the difference, or anything else that helps.
+  - type: checkboxes
+    id: sanitized
+    attributes:
+      label: Sensitive data
+      options:
+        - label: I removed all API keys, secrets, tokens, and account numbers from this report.
+          required: true
